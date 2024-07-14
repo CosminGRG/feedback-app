@@ -1,0 +1,167 @@
+
+:root {
+    --primary-color: #171717;
+    --secondary-color: #0d0d0d;
+    --accent-color: #9147ff;
+}
+
+html {
+    font-size: 14px;
+    
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+    
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: var(--primary-color) !important;
+    color: white;
+}
+
+.bg-accent {
+    background-color: var(--accent-color) !important;
+}
+
+.text-accent {
+    color: var(--secondary-color);
+}
+
+button {
+    color: white;
+    text-decoration: none;
+    background-color: var(--accent-color);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    border: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    button:hover {
+        color: black;
+        background-color: white;
+    }
+
+.DeleteFeedback {
+    width: 26px;
+    height: 26px;
+}
+
+    .DeleteFeedback:hover{
+        background-color: red;
+    }
+
+input[type="text"] {
+    color: white;
+    background-color: var(--secondary-color);
+}
+
+    input[type="text"]:focus {
+        color: white;
+        background-color: var(--secondary-color);
+    }
+    
+    input[type="text"]::placeholder{
+
+    }
+
+textarea {
+    color: white !important;
+    background-color: var(--secondary-color) !important;
+}
+
+    textarea:focus {
+        color: white;
+        background-color: var(--secondary-color);
+    }
+
+    textarea::placeholder {
+
+    }
+
+.form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(145, 71, 255, 0.8);
+}
+
+.navbar-dark {
+    background-color: var(--secondary-color) !important;
+}
+
+.footer {
+    background-color: var(--secondary-color) !important;
+}
+
+.card {
+    background-color: var(--secondary-color);
+}
+
+.card-footer {
+    background-color: var(--primary-color);
+}
+
+.searchInput {
+    padding: 5px 30px;
+}
+
+.searchLabel {
+    position: relative;
+}
+
+    .searchLabel:before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+        width: 20px;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>') center / contain no-repeat;
+    }
+
+.logo {
+    border-radius: 20px;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle at 33% 100%, #9b36b7 4%, #9b36b7 30%, #515ecf 62%, #9147ff 85%, #9147ff);
+}
+
+.logo-inner {
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+    a:hover {
+        color: white;
+    }
+
+.userBadge {
+    padding-left: 0;
+    color: #6c757d;
+}
+
+.center-container {
+    height: 100vh;
+}

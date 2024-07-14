@@ -1,0 +1,24 @@
+﻿@using Microsoft.AspNetCore.Authentication
+@model FeedbackApp.Models.FeedbackModel
+
+@if (User?.Identity?.IsAuthenticated ?? false)
+{
+    <div class="d-flex justify-content-center flex-column">
+        <form id="createFeedbackForm" asp-action="CreateFeedback" asp-controller="Home" method="post">
+            @Html.AntiForgeryToken()
+            <div class="form-group my-2">
+                <label asp-for="Title" hidden class="control-label"></label>
+                <input asp-for="Title" class="form-control mb-2" type="text" id="titleBox" placeholder="Title your feedback" required />
+                <span asp-validation-for="Title" class="text-danger"></span>
+                <label asp-for="Body" hidden class="control-label"></label>
+                <input asp-for="CreatedBy" hidden value="@User.Identity.Name" />
+                <textarea asp-for="Body" class="form-control mb-2" id="feedbackBox" rows="3" placeholder="Enter your feedback here" required></textarea>
+                <span asp-validation-for="Body" class="text-danger"></span>
+                <div class="d-flex justify-content-end">
+                    <button id="submitFeedback" class="loginGithub" title="Add feedback" type="submit"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M10 14l11 -11" /><path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5" /></svg>&nbsp;Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+}

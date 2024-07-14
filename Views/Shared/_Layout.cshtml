@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FeedbackApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/FeedbackApp.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid d-flex justify-content-between">
+            <a class="navbar-brand" href="/">
+                <div class="row d-flex align-items-center">
+                    <div class="col-auto">
+                        <div class="logo">
+                            <div class="logo-inner">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        FeedbackApp
+                    </div>
+                </div>
+            </a>
+            @await Html.PartialAsync("_LoggedInUserPartial")
+        </div>
+    </nav>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <div class="">
+                @RenderBody()
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer text-muted">
+        <div class="container-fluid">
+            &copy; @DateTime.Now.Year.ToString() - FeedbackApp
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
